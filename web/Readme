@@ -1,0 +1,42 @@
+# Tecnologias utilizadas:
+
+Front-end:
+React 19.1.0
+React Router DOM 7.6.3
+Tailwind CSS 4.1.11
+clsx 2.1.1
+class-variance-authority 0.7.1
+Back-end:
+Node.js (não utilizado diretamente no projeto)
+Bibliotecas de apoio:
+@tanstack/react-query 5.81.5
+@radix-ui/react-slot 1.2.3
+lucide-react 0.525.0
+Padrões do projeto:
+
+Estrutura de pastas:
+src/: pasta principal do projeto
+src/pages/
+: pasta para as páginas do projeto
+src/components/
+: pasta para os componentes do projeto
+src/lib/
+: pasta para as bibliotecas e utilitários do projeto
+Nomenclatura:
+Utilizar camelCase para nomes de variáveis e funções
+Utilizar PascalCase para nomes de componentes e classes
+Setup do projeto:
+
+Instalar as dependências:
+npm install ou yarn install
+Configurar o ambiente de desenvolvimento:
+npm run dev ou yarn dev
+Buildar o projeto:
+npm run build ou yarn build
+Iniciar o servidor de produção:
+npm run start ou yarn start
+Observações:
+
+Certifique-se de ter instalado o Node.js e o npm ou yarn em sua máquina.
+O projeto utiliza o Tailwind CSS, que requer a instalação do tailwindcss e do postcss como dependências de desenvolvimento.
+O projeto utiliza o React Query, que requer a instalação do @tanstack/react-query como dependência de desenvolvimento.

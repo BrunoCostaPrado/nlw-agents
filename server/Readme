@@ -1,0 +1,43 @@
+# Este é um projeto de servidor em Node.js que utiliza o framework Fastify e o banco de dados PostgreSQL.
+
+Tecnologias Utilizadas
+
+Node.js (versão 14 ou superior)
+Fastify (versão 5.4.0 ou superior)
+PostgreSQL (versão 13 ou superior)
+Drizzle ORM (versão 0.44.2 ou superior)
+Zod (versão 3.25.75 ou superior)
+TypeScript (versão 5.8.3 ou superior)
+Padrões do Projeto
+
+O projeto utiliza o padrão de organização de pastas e arquivos do Fastify.
+O código é escrito em TypeScript e utiliza o padrão de sintaxe do ECMAScript 2022.
+O banco de dados é configurado utilizando o Drizzle ORM.
+Setup
+
+Clone o repositório do projeto:
+bash
+git clone <https://github.com/seu-repositorio/projeto.git>
+Instale as dependências do projeto:
+bash
+npm install
+Configure o banco de dados:
+Crie um arquivo .env na raiz do projeto com as seguintes variáveis de ambiente:
+bash
+DATABASE_URL=postgresql://usuario:senha@localhost:5432/banco
+PORT=3333
+Substitua usuario, senha, localhost e banco pelos valores correspondentes ao seu banco de dados.
+Execute o comando para criar as tabelas do banco de dados:
+bash
+npx drizzle-kit migrate
+Inicie o servidor:
+bash
+npm start
+Acesse o servidor em <http://localhost:3333> para verificar se o projeto está funcionando corretamente.
+Comandos Úteis
+
+npm start: Inicia o servidor.
+npm run db:mig: Executa as migrações do banco de dados.
+npm run db:seed: Executa o script de seed do banco de dados.
+npm run lint: Executa o linter do código.
+npm run typecheck: Executa o tipo de verificação do código.

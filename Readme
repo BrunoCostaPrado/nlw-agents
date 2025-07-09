@@ -1,0 +1,48 @@
+# Projeto Ask
+
+## Este é um projeto de servidor em Node.js que utiliza o framework Fastify e o banco de dados PostgreSQL
+
+Tecnologias Utilizadas
+Front-end:
+React 19.1.0
+React Router DOM 7.6.3
+Tailwind CSS 4.1.11
+clsx 2.1.1
+class-variance-authority 0.7.1
+Back-end:
+Node.js (não utilizado diretamente no projeto)
+Bibliotecas de apoio:
+@tanstack/react-query 5.81.5
+@radix-ui/react-slot 1.2.3
+lucide-react 0.525.0
+Padrões do Projeto
+Estrutura de pastas:
+src/: pasta principal do projeto
+src/pages/: pasta para as páginas do projeto
+src/components/: pasta para os componentes do projeto
+src/lib/: pasta para as bibliotecas e utilitários do projeto
+Nomenclatura:
+Utilizar camelCase para nomes de variáveis e funções
+Utilizar PascalCase para nomes de componentes e classes
+Setup do Projeto
+Instalar as dependências:
+pnpm install
+
+Configurar o ambiente de desenvolvimento:
+pnpm run dev
+
+Build do projeto:
+pnpm run build
+
+Iniciar o servidor de produção:
+pnpm run start
+
+Observações
+Certifique-se de ter instalado o Node.js e o pnpm em sua máquina.
+O projeto utiliza o Tailwind CSS, que requer a instalação do tailwindcss e do postcss como dependências de desenvolvimento.
+O projeto utiliza o React Query, que requer a instalação do @tanstack/react-query como dependência de desenvolvimento.
+Comandos Úteis
+pnpm start: Inicia o servidor.
+pnpm run db:mig: Executa as migrações do banco de dados.
+pnpm run db:seed: Executa o script de seed do banco de dados.
+pnpm run lint: Executa o linter do código.

@@ -1,0 +1,47 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "",
+    "db:gen": "drizzle-kit generate",
+    "db:mig": "drizzle-kit migrate",
+    "db:seed": "node --env-file .env  --experimental-strip-types --no-warnings src/db/seed.ts",
+    "db:std": "drizzle-kit studio",
+    "dev": "tsx  --env-file .env  --watch src/server.ts",
+    "lint:unsafe": "biome check --write --unsafe .",
+    "lint": "biome check --write .",
+    "postinstall": "patch-package",
+    "start": "node --env-file .env  --experimental-strip-types --no-warnings  src/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "dotenv": "^17.1.0",
+    "drizzle-orm": "^0.44.2",
+    "fastify": "^5.4.0",
+    "fastify-type-provider-zod": "^5.0.1",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7",
+    "zod": "^3.25.75"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/bun": "^1.2.18",
+    "@types/node": "^24.0.10",
+    "@types/pg": "^8.15.4",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-seed": "^0.3.1",
+    "patch-package": "^8.0.0",
+    "postinstall": "^0.11.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "ultracite": "5.0.32"
+  }
+}
