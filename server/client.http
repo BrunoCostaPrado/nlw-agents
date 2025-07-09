@@ -3,11 +3,48 @@
 
 
 # Health 
+# @name healthCheck
 GET {{baseUrl}}/health
 
 
 ###
 
 # GET Rooms
+# @name getRoom
 GET {{baseUrl}}/rooms
-# GET http://localhost:3333/rooms
+
+
+### 
+# Create Room
+# @name createRoom
+POST {{baseUrl}}/rooms
+#Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Teste",
+    "description": "test"
+}
+
+###
+
+@roomId={{createRoom.response.body.$.roomId}}
+
+###
+
+#Get Room Questions
+# @name getRoomQuestions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+### 
+# Create Question
+# @name createQuestion
+POST {{baseUrl}}/rooms/{{roomId}}/questions
+#Accept: application/json
+Content-Type: application/json
+
+{
+    "question": "Quão o conceito de estrategia?"
+}
+
+###

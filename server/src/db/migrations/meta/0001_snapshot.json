@@ -1,6 +1,6 @@
 {
-  "id": "72c92f54-ad5a-4477-ac2a-614066dee595",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "06366e51-5848-4217-9698-0ad344e0c768",
+  "prevId": "72c92f54-ad5a-4477-ac2a-614066dee595",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -21,8 +21,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "question": {
+          "name": "question",
           "type": "text",
           "primaryKey": false,
           "notNull": true

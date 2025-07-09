@@ -6,7 +6,10 @@ import {
 } from "fastify-type-provider-zod"
 import { env } from "@/env"
 import { app } from "./app"
-import { getRoomsRoute } from './http/routes/get-rooms';
+import { createQuestionRoute } from "./http/routes/create-question"
+import { createRoomsRoute } from "./http/routes/create-room"
+import { getRoomsRoute } from "./http/routes/get-rooms"
+import { getRoomsQuestions } from "./http/routes/get-rooms-questions"
 
 app.register(fastifyCors, {
   origin: "http://localhost:5173",
@@ -20,6 +23,9 @@ app.get("/health", () => {
 })
 
 app.register(getRoomsRoute)
+app.register(createRoomsRoute)
+app.register(getRoomsQuestions)
+app.register(createQuestionRoute)
 
 app.listen({ port: env.PORT ? Number(env.PORT) : 3333 })
 
