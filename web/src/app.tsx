@@ -6,14 +6,14 @@ import { Room } from "@/pages/room"
 const queryClient = new QueryClient()
 
 export function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<CreateRoom />} index path="/" />
-          <Route element={<Room />} path="/room:roomId" />
-        </Routes>
-      </BrowserRouter>
-    </QueryClientProvider>
-  )
+	return (
+		<QueryClientProvider client={queryClient}>
+			<BrowserRouter>
+				<Routes>
+					<Route element={<CreateRoom />} index path="/" />
+					<Route element={<Room />} path="/room/:roomId" />
+				</Routes>
+			</BrowserRouter>
+		</QueryClientProvider>
+	)
 }

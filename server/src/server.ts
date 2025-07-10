@@ -1,8 +1,8 @@
 import { fastifyCors } from "@fastify/cors"
 
 import {
-  serializerCompiler,
-  validatorCompiler,
+	serializerCompiler,
+	validatorCompiler,
 } from "fastify-type-provider-zod"
 import { env } from "@/env"
 import { app } from "./app"
@@ -12,14 +12,14 @@ import { getRoomsRoute } from "./http/routes/get-rooms"
 import { getRoomsQuestions } from "./http/routes/get-rooms-questions"
 
 app.register(fastifyCors, {
-  origin: "http://localhost:5173",
+	origin: "http://localhost:5173",
 })
 
 app.setSerializerCompiler(serializerCompiler)
 app.setValidatorCompiler(validatorCompiler)
 
 app.get("/health", () => {
-  return "Ok"
+	return "Ok"
 })
 
 app.register(getRoomsRoute)
