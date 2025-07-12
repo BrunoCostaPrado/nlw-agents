@@ -9,18 +9,18 @@ const db = drizzle(sql, { schema, casing: "snake_case" })
 await reset(db, schema)
 
 await seed(db, schema).refine(f => {
-  return {
-    rooms: {
-      count: 5,
-      columns: {
-        name: f.companyName(),
-        description: f.loremIpsum(),
-      },
-    },
-    questions: {
-      count: 20,
-    },
-  }
+	return {
+		rooms: {
+			count: 5,
+			columns: {
+				name: f.companyName(),
+				description: f.loremIpsum(),
+			},
+		},
+		questions: {
+			count: 20,
+		},
+	}
 })
 
 await sql.end()

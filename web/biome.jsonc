@@ -52,13 +52,23 @@
 				"useAsConstAssertion": "error",
 				"useDefaultParameterLast": "error",
 				"useEnumInitializers": "error",
-				"useSelfClosingElements": "error",
+				//"useSelfClosingElements": "error",
 				"useSingleVarDeclarator": "error",
 				"noUnusedTemplateLiteral": "error",
 				"useNumberNamespace": "error",
 				"noInferrableTypes": "error",
 				"noUselessElse": "error",
 				"noNonNullAssertion": "off"
+			},
+			"correctness": {
+				"noUnusedVariables": {
+					"level": "info",
+					"fix": "none", // no code fix suggested for noUnusedVariables
+					"options": {
+						"ignoreRestSiblings": true
+					}
+				},
+				"noUnusedFunctionParameters": "info"
 			}
 		}
 	}

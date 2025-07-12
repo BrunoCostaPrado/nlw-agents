@@ -39,12 +39,13 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 ### 
 # Create Question
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/9d34c46c-fba8-4feb-89f4-2bce2af0e7c6/questions
+# POST {{baseUrl}}/rooms/{{roomId}}/questions
 #Accept: application/json
 Content-Type: application/json
 
 {
-    "question": "Quão o conceito de estrategia?"
+    "question": "O que é React?"
 }
 
 ###

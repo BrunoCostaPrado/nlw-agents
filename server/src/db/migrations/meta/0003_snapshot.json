@@ -1,9 +1,64 @@
 {
-	"id": "72c92f54-ad5a-4477-ac2a-614066dee595",
-	"prevId": "00000000-0000-0000-0000-000000000000",
+	"id": "848c2240-a859-4b29-aea2-d39b990e05ff",
+	"prevId": "2a849316-7159-4ade-8d93-0a04a7774906",
 	"version": "7",
 	"dialect": "postgresql",
 	"tables": {
+		"public.audio_chunks": {
+			"name": "audio_chunks",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "uuid",
+					"primaryKey": true,
+					"notNull": true,
+					"default": "gen_random_uuid()"
+				},
+				"room_id": {
+					"name": "room_id",
+					"type": "uuid",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"transcription": {
+					"name": "transcription",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"embeddings": {
+					"name": "embeddings",
+					"type": "vector(768)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"create_at": {
+					"name": "create_at",
+					"type": "timestamp",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "now()"
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {
+				"audio_chunks_room_id_rooms_id_fk": {
+					"name": "audio_chunks_room_id_rooms_id_fk",
+					"tableFrom": "audio_chunks",
+					"tableTo": "rooms",
+					"columnsFrom": ["room_id"],
+					"columnsTo": ["id"],
+					"onDelete": "no action",
+					"onUpdate": "no action"
+				}
+			},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {},
+			"policies": {},
+			"checkConstraints": {},
+			"isRLSEnabled": false
+		},
 		"public.questions": {
 			"name": "questions",
 			"schema": "",
@@ -21,8 +76,8 @@
 					"primaryKey": false,
 					"notNull": true
 				},
-				"name": {
-					"name": "name",
+				"question": {
+					"name": "question",
 					"type": "text",
 					"primaryKey": false,
 					"notNull": true

@@ -1,20 +1,34 @@
 {
-  "version": "7",
-  "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1752047875090,
-      "tag": "0000_big_millenium_guard",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1752049419736,
-      "tag": "0001_perpetual_molly_hayes",
-      "breakpoints": true
-    }
-  ]
+	"version": "7",
+	"dialect": "postgresql",
+	"entries": [
+		{
+			"idx": 0,
+			"version": "7",
+			"when": 1752047875090,
+			"tag": "0000_big_millenium_guard",
+			"breakpoints": true
+		},
+		{
+			"idx": 1,
+			"version": "7",
+			"when": 1752049419736,
+			"tag": "0001_perpetual_molly_hayes",
+			"breakpoints": true
+		},
+		{
+			"idx": 2,
+			"version": "7",
+			"when": 1752197710865,
+			"tag": "0002_empty_ser_duncan",
+			"breakpoints": true
+		},
+		{
+			"idx": 3,
+			"version": "7",
+			"when": 1752210714645,
+			"tag": "0003_dazzling_odin",
+			"breakpoints": true
+		}
+	]
 }

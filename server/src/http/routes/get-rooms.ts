@@ -4,18 +4,18 @@ import { db } from "./../../db/connection"
 import { schema } from "../../db/schema/index"
 
 export const getRoomsRoute: FastifyPluginCallbackZod = app => {
-  app.get("/rooms", async () => {
-    const result = await db
-      .select({
-        id: schema.rooms.id,
-        name: schema.rooms.name,
-        createAt: schema.rooms.createAt,
-        questionsCount: count(schema.questions.id),
-      })
-      .from(schema.rooms)
-      .leftJoin(schema.questions, eq(schema.questions.roomId, schema.rooms.id))
-      .groupBy(schema.rooms.id, schema.rooms.name)
-      .orderBy(schema.rooms.createAt)
-    return result
-  })
+	app.get("/rooms", async () => {
+		const result = await db
+			.select({
+				id: schema.rooms.id,
+				name: schema.rooms.name,
+				createAt: schema.rooms.createAt,
+				questionsCount: count(schema.questions.id),
+			})
+			.from(schema.rooms)
+			.leftJoin(schema.questions, eq(schema.questions.roomId, schema.rooms.id))
+			.groupBy(schema.rooms.id, schema.rooms.name)
+			.orderBy(schema.rooms.createAt)
+		return result
+	})
 }
